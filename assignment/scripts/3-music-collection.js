@@ -28,3 +28,19 @@ function showCollection(albums) {
 }
 
 showCollection(collection);
+
+function findByArtist(artist) {
+    var results = [];
+    for (var i=0; i < collection.length; i++) {
+        if (collection[i].artist === artist) {
+            results.push(collection[i]);
+        }
+    }
+    return results;
+}
+
+var nasAlbums = findByArtist("Nas");
+showCollection(nasAlbums);
+
+var britneyspearsAlbums = findByArtist("Britney Spears")
+showCollection(britneyspearsAlbums);
